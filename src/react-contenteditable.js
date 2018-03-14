@@ -16,9 +16,6 @@ export default class ContentEditable extends React.Component {
         ref: (e) => this.htmlEl = e,
         onInput: this.emitChange,
         onBlur: this.props.onBlur || this.emitChange,
-        onClick: this.props.onClick,
-        onMouseDown: this.props.onMouseDown,
-        onMouseUp: this.props.onMouseUp,
         contentEditable: !this.props.disabled,
         dangerouslySetInnerHTML: {__html: html}
       },
